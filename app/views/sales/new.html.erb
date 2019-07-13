@@ -1,0 +1,24 @@
+<h1>Formulario</h1>
+<br>
+
+<%= form_with model: Sale.new, local: true do |f| %>
+  <%= f.label :cod, "Ingresa tu codigo"%>
+  <%= f.number_field :cod %>
+  <br>
+  <%= f.label :detail, "Detalle de la venta"%>
+  <%= f.text_area :detail %>
+  <br>
+  <%= f.label :category, "Ingresa la categoria"%>
+  <%= f.text_field :category %>
+  <br>
+  <%= f.label :value, "Ingresa el valor"%>
+  <%= f.number_field :value %>
+  <br>
+  <%= f.label :discount, "Ingresa el descuento"%>
+  <%= f.number_field :discount %>
+  <br>
+  <%= f.label :check, "CheckBox Exento de IVA"%>
+  <%= f.check_box :check %>
+  <br>
+  <%= f.submit "Enviar"%>
+<% end %>

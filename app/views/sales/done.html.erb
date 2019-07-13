@@ -1,0 +1,17 @@
+<h1>El registro fue almacenado con existo</h1>
+<br>
+<br>
+
+<table>
+  <td>Codigo</td>
+  <td>Descuento</td>
+  <td>Total</td>
+  <%@sales.each do |s| %>
+    <tr>
+      <td><%= s.cod%></td>
+      <td><%= s.discount%></td>
+      <td><%= s.total%></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to  "volver", sales_new_path%>
